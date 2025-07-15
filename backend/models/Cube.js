@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // Schema
 
 const CubeSchema = new mongoose.Schema({
     cubeId: { type: String, default: 'cube_1' },
