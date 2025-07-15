@@ -11,7 +11,7 @@ body {
     flex-direction: column;
 }
 
-/* 🧊 Canvas container */
+/* Canvas container */
 #canvas-container {
     flex: 1;
     position: relative;
@@ -25,7 +25,7 @@ body {
     display: block;
 }
 
-/* 🎛 Control Panel */
+/* Control Panel */
 #controls {
     position: absolute;
     top: 10px;
@@ -58,7 +58,7 @@ body {
     max-width: 100%;
 }
 
-/* 🎮 Arrows in grid (up, left/right, down) */
+/*Arrows in grid (up, left/right, down) */
 .arrow-grid {
     display: grid;
     grid-template-areas:
@@ -120,7 +120,7 @@ button:active {
     transform: translateY(0);
 }
 
-/* ✅ Feedback */
+/* Feedback */
 #feedback {
     color: #00ff88;
     font-size: 14px;
@@ -129,7 +129,7 @@ button:active {
     font-weight: bold;
 }
 
-/* 📱 Mobile Responsive Design */
+/* 📱 Mobile Responsive */
 @media (max-width: 768px) {
     #controls {
         top: 5px;
@@ -209,7 +209,7 @@ button:active {
     }
 }
 
-/* Landscape orientation on mobile */
+/* Landscape orientation */
 @media (max-width: 768px) and (orientation: landscape) {
     #controls {
         position: fixed;

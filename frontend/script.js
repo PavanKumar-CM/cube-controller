@@ -1,6 +1,6 @@
 let scene, camera, renderer, cube;
 let rotationSpeed = 0.01;
-let position = { x: 0, y: 0.0, z: 0 }; // default cube position
+let position = { x: 0, y: 0.0, z: 0 }; 
 const API_URL = 'http://localhost:5000/api/cubes/cube_1';
 
 function init() {

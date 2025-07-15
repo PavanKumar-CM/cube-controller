@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Cube = require('../models/Cube');
 
-// GET cube state
+// GET cube state 
 router.get('/:id', async (req, res) => {
     try {
         const cube = await Cube.findOne({ cubeId: req.params.id });
