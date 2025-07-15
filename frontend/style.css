@@ -1,0 +1,233 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #111;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🧊 Canvas container */
+#canvas-container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#three-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 🎛 Control Panel */
+#controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(34, 34, 34, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+}
+
+/* 🎚 Slider Row */
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#rotationSlider {
+    width: 200px;
+    max-width: 100%;
+}
+
+/* 🎮 Arrows in grid (up, left/right, down) */
+.arrow-grid {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left . right"
+        ". down .";
+    grid-gap: 6px;
+    justify-items: center;
+}
+
+.arrow-grid button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.arrow-grid button:nth-child(1) {
+    grid-area: up;
+}
+
+.arrow-grid button:nth-child(2) {
+    grid-area: left;
+}
+
+.arrow-grid button:nth-child(3) {
+    grid-area: right;
+}
+
+.arrow-grid button:nth-child(4) {
+    grid-area: down;
+}
+
+/* 💾 Action buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 60px;
+}
+
+button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ✅ Feedback */
+#feedback {
+    color: #00ff88;
+    font-size: 14px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 📱 Mobile Responsive Design */
+@media (max-width: 768px) {
+    #controls {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        padding: 12px 15px;
+        max-width: none;
+        width: calc(100% - 10px);
+    }
+
+    .label-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #rotationSlider {
+        width: 180px;
+    }
+
+    .arrow-grid {
+        grid-gap: 4px;
+    }
+
+    .arrow-grid button {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 13px;
+        min-width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    #controls {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0 0 15px 15px;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .label-row {
+        font-size: 13px;
+    }
+
+    #rotationSlider {
+        width: 150px;
+    }
+
+    .arrow-grid button {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    #controls {
+        position: fixed;
+        top: 5px;
+        left: 5px;
+        max-width: 250px;
+        max-height: calc(100vh - 20px);
+        overflow-y: auto;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    button {
+        padding: 4px 8px;
+        font-size: 11px;
+        min-width: 40px;
+    }
+}

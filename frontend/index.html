@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube Controller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="canvas-container">
+        <canvas id="three-canvas"></canvas>
+        
+        <div id="controls">
+            <!-- Range Slider -->
+            <div class="label-row">
+                <label>Rotation Speed:</label>
+                <input type="range" id="rotationSlider" min="0" max="0.1" step="0.005" value="0.01" />
+            </div>
+
+             <!-- When User Click ↑ ← → ↓ -> the move() function is called from script.js and executes logic -->
+            <div class="arrow-grid">
+                <button onclick="move('up')">↑</button>
+                <button onclick="move('left')">←</button>
+                <button onclick="move('right')">→</button>
+                <button onclick="move('down')">↓</button>
+            </div>
+
+            <div class="action-buttons">
+
+                <!-- Calling resetCube logic from script.js -->
+                <button onclick="resetCube()">Reset</button>
+
+                <!-- Calling saveCube logic from script.js -->
+                <button onclick="saveCube()">Save</button>
+
+                <!-- Calling Get Saved State logic from script.js -->
+                <button onclick="getCubeState()">Get Saved State</button>
+            </div>
+
+            <!-- Visual feedback -->
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <!-- Three.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
