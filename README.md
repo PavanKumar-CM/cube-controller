@@ -6,7 +6,7 @@ A full stack web application that lets users interact with a 3D cube using slide
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/cube-controller.git
+git clone https://github.com/PavanKumar-CM/cube-controller.git
 cd cube-controller
 ```
 
