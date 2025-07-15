@@ -1,4 +1,4 @@
-const mongoose = require('mongoose'); // Schema
+const mongoose = require('mongoose');SVGAnimatedAngle
 
 const CubeSchema = new mongoose.Schema({
     cubeId: { type: String, default: 'cube_1' },
