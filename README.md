@@ -48,6 +48,16 @@ Open `frontend/index.html` in your browser or use Live Server.
 - Database: MongoDB with Mongoose
 - Tools: Git, VS Code
 
+## Screenshots
+
+### Cube Controller Interface
+
+![Cube UI](./screenshots/CubeInterface.png)
+
+### Controls Panel
+
+![Controls](./screenshots/ControlPanel.png)
+
 ## Limitations
 
 - No user authentication
